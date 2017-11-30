@@ -9,6 +9,7 @@
         <meta charset="utf-8">
         <!--Imagen a corde a la pantalla, no zoom -->
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, minimum-scale=1">
+        <link rel="stylesheet" href="./style.css">
         <title> ¡Bienvenidos a yo te adopto! </title>
         <!--Reset de estilos en el navegador en formatos de texto -->
         <style>
@@ -59,13 +60,35 @@
             border-collapse: collapse;
             border-spacing: 0;
         }
+        *{
+            box-sizing: border-box;
+        }
+    
+        nav{
+            display: none;
+        }
+        header{ 
+            position: fixed;
+            width: 100% ;
+            padding: 20px;
+        }
+        header i:first-child{
+            font-size: 26px;
+        }
+        header i:last-child{
+            font-size: 26px;
+            float: right;
+        }
     </style>
     </head>
     <!--Lo que el usuario ve -->
-
+    <!-- nav{display: none;} oculta el menú pero deja a la vista el icono -->
     <body>
+        <header>
         <!--Menú de navegacion style(oculta el menú)-->
-        <header style="display: none;">
+        <!--<header style="display: none;">-->
+            <!--Icono de Menú header i:first-child{font-size: 26px;}-->
+            <i class="yta ytamenu_icon"> </i>
             <!--Listado de opciones del menu en orden-->
             <nav>
                 <!--Titulo Principal-->
@@ -92,11 +115,13 @@
                     </li>
                 </ul>
             </nav>
+            <!--Icono de YTA a la derecha header i:last-child{font-size: 26px;float: right;} -->
+            <i class="yta ytayta_icon-white"></i>
         </header>
         <!--Main todo lo importante del la programacion -->
         <main>
             <!--Poner una imagen de fondo responsiva -->
-            <section style="background-image:url(./img/bg-home_320.jpg);height: 600px; background-size: cover; background-position: center">
+            <section style="background-image:url(./img/bg-home_320.jpg);height: 600px; background-size: cover; background-position: center; display:flex;align-items:center; justify-content:center;height:100vh;">
                 <!--Titulo principal de la pagina Home  ctrl + shif (elimina lineas)-->
                 <!--Agregar Imagen svg -->
                 <svg width="200" height="200" aria-labelledby="Home-title home-desc">
