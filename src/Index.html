@@ -71,6 +71,7 @@
             position: fixed;
             width: 100% ;
             padding: 20px;
+            z-index: 1;
         }
         header i:first-child{
             font-size: 26px;
@@ -78,6 +79,21 @@
         header i:last-child{
             font-size: 26px;
             float: right;
+        }
+        .home{
+            background-image:url(./img/bg-home_320.jpg);
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            display:flex;align-items:center;
+            justify-content:center;
+            height:100vh;
+            position: relative;
+        }
+        .home-slide{
+        position: absolute;
+        bottom: 20px;
+        font-size: 50px;
         }
     </style>
     </head>
@@ -121,7 +137,7 @@
         <!--Main todo lo importante del la programacion -->
         <main>
             <!--Poner una imagen de fondo responsiva -->
-            <section style="background-image:url(./img/bg-home_320.jpg);height: 600px; background-size: cover; background-position: center; display:flex;align-items:center; justify-content:center;height:100vh;">
+            <section class="home">
                 <!--Titulo principal de la pagina Home  ctrl + shif (elimina lineas)-->
                 <!--Agregar Imagen svg -->
                 <svg width="200" height="200" aria-labelledby="Home-title home-desc">
@@ -129,6 +145,8 @@
                     <desc id="home-desc">Hogares para nuestros Amigos</desc>
                     <image xlink:href="./img/isologo.svg" width="200"height="200"></image>
                 </svg>
+                <!--Icono de la manita con css -->
+                <i class="home-slide yta ytaslide_icon-up-down"></i>
             </section>
             <!--Subtitulo de la pagina -->
             <!--Seccion de Menu de mascotas -->
