@@ -122,17 +122,106 @@
            font-family: maaxRounded;
            font-weight: bold; 
         }
+        h2{
+            font-size: 24px;
+        }
 
         .aboutUs h2{
             color: #553457;
-            font-size: 24px;
         }
 
         .aboutUs p {
             color: white;
             text-align: left;
         }
-
+        .adopt-title{
+            background: #ffc85e;
+            text-align: center;
+            padding: 38px;
+        }
+        .adopt-title h2{
+            color: #553457;
+            margin-top: 10px;
+        }
+        .adopt-title i{
+            font-size: 38px;
+        }
+        .adopt-list{
+            display: flex;
+            overflow: hidden;
+        }
+        .adopt-card-img{
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        .adopt-card-img.dog{
+            background-image: url(./img/dog.jpg);  
+        }
+        .adopt-card-img.cat{
+            background-image: url(./img/cat.jpg);  
+        }
+        .adopt-card-img.bunny{
+            background-image: url(./img/bunny.jpg);  
+        }
+        .adopt-card:nth-child(odd){
+            background-color: #f06252;
+        }
+        .adopt-card:nth-child(even){
+            background-color: #553457;
+        }
+        .adopt-card-desc{
+            text-align: center;
+            color: white;
+            padding: 30px 20px 20px;
+        }
+        .adopt-card-desc h3{
+            font-size: 27px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .adopt-card:first-child{
+            margin-left: -50%;
+        }
+        .adopt-card:last-child{
+            margin-right: -50%;
+        }
+        .adopt-card{
+            position: relative;
+        }
+        .adopt-card:first-child:before,
+        .adopt-card:last-child::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: rgba(0,0,0,0.6);
+        }
+        .adopt-card-desc{
+            position: relative;
+        }
+        .adopt-card-desc i{
+            position: absolute;
+            top: -15px;
+            left: 0;
+            right: 0;
+            font-size: 32px;
+        }
+        .adopt-card-desc i:before{
+            background-color: #553457;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .adopt-footer{
+            background-color:  #ffc85e;
+            padding: 32px;
+            text-align: center;
+        }
+        .adopt-footer i{
+            font-size: 32px;
+              }
     </style>
 </head>
 <!--Lo que el usuario ve -->
@@ -180,7 +269,6 @@
             </svg>
             <i class="home-slide yta yta-slide_icon-up-down"></i>
         </section>
-        <!--Subtitulo de la pagina -->
         <!--Seccion de Menu de mascotas -->
         <section class="aboutUs">
             <picture>
@@ -203,29 +291,45 @@
                 laudantium?</p>
         </section>
         <section>
-            <h2>Busco un Hogar, ¿Me adoptas?</h2>
-            <!--Va dentro del section y va la informacion especifica de algun tema -->
-            <article>
-                <h3>Casimiro</h3>
-                <!--Lorem para agregar texto al azar. por si no se tiene un texto definido -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem alias, deserunt pariatur et autem quod dicta
-                    doloribus sint omnis sequi, ullam voluptatem! Quisquam accusantium voluptates doloremque eius dolor tenetur?
-                    Commodi.</p>
-            </article>
-            <article>
-                <h3>Felipe Gato</h3>
-                <!--Lorem para agregar texto al azar. por si no se tiene un texto definido -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem alias, deserunt pariatur et autem quod dicta
-                    doloribus sint omnis sequi, ullam voluptatem! Quisquam accusantium voluptates doloremque eius dolor tenetur?
-                    Commodi.</p>
-            </article>
-            <article>
-                <h3>Conejo Benito</h3>
-                <!--Lorem para agregar texto al azar. por si no se tiene un texto definido -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem alias, deserunt pariatur et autem quod dicta
-                    doloribus sint omnis sequi, ullam voluptatem! Quisquam accusantium voluptates doloremque eius dolor tenetur?
-                    Commodi.</p>
-            </article>
+            <div class="adopt-title">
+                <i class="yta yta-yta_icon-white"></i>
+                <h2>Busco un Hogar, ¿Me adoptas?</h2>
+            </div>
+            <div class="adopt-list">
+                <article class="adopt-card">
+                    <div class="adopt-card-img dog"></div>
+                    <div class="adopt-card-desc">
+                        <i class="yta yta-paw_print"></i>
+                        <h3>Casimiro</h3>
+                        <!--Lorem para agregar texto al azar.  -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Quidem alias.</p>
+                    </div>
+                </article>
+                <article class="adopt-card">
+                    <div class="adopt-card-img cat"></div>
+                    <div class="adopt-card-desc">
+                        <i class="yta yta-paw_print"></i>
+                        <h3>Felipe Gato</h3>
+                        <!--Lorem para agregar texto al azar.  -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quidem alias.</p>
+                    </div>
+                </article>
+                <article class="adopt-card">
+                    <div class="adopt-card-img bunny"></div>
+                    <div class="adopt-card-desc">
+                        <i class="yta yta-paw_print"></i>
+                        <h3>Conejo Benito</h3>
+                        <!--Lorem para agregar texto al azar.  -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Quidem alias.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="adopt-footer">
+                <i class="yta yta-slide_icon"></i>
+            </div>
         </section>
         <!--Seccion de Testimonios -->
         <section>
